@@ -1,4 +1,4 @@
-package com.ycngmn.notubetv
+package com.hwoxan.noahtube
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,8 +8,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
 import androidx.tv.material3.ExperimentalTvMaterial3Api
-import com.ycngmn.notubetv.ui.screens.YoutubeWV
-import com.ycngmn.notubetv.ui.theme.NoTubeTVTheme
+import com.hwoxan.noahtube.ui.screens.YoutubeWV
+import com.hwoxan.noahtube.ui.theme.NoahTubeTheme
 
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalTvMaterial3Api::class)
@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         window.setLayout(3840, 2160)
         setContent {
-            NoTubeTVTheme {
+            NoahTubeTheme {
                Box(modifier = Modifier.fillMaxSize()) { YoutubeWV() }
             }
         }

@@ -1,4 +1,4 @@
-package com.ycngmn.notubetv.ui.screens
+package com.hwoxan.noahtube.ui.screens
 
 import android.app.Activity
 import android.view.View
@@ -17,15 +17,15 @@ import com.multiplatform.webview.web.LoadingState
 import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.rememberWebViewNavigator
 import com.multiplatform.webview.web.rememberWebViewState
-import com.ycngmn.notubetv.R
-import com.ycngmn.notubetv.ui.YoutubeVM
-import com.ycngmn.notubetv.ui.components.UpdateDialog
-import com.ycngmn.notubetv.utils.ExitBridge
-import com.ycngmn.notubetv.utils.NetworkBridge
-import com.ycngmn.notubetv.utils.fetchScripts
-import com.ycngmn.notubetv.utils.getUpdate
-import com.ycngmn.notubetv.utils.permHandler
-import com.ycngmn.notubetv.utils.readRaw
+import com.hwoxan.noahtube.R
+import com.hwoxan.noahtube.ui.YoutubeVM
+import com.hwoxan.noahtube.ui.components.UpdateDialog
+import com.hwoxan.noahtube.utils.ExitBridge
+import com.hwoxan.noahtube.utils.NetworkBridge
+import com.hwoxan.noahtube.utils.fetchScripts
+import com.hwoxan.noahtube.utils.getUpdate
+import com.hwoxan.noahtube.utils.permHandler
+import com.hwoxan.noahtube.utils.readRaw
 
 @Composable
 fun YoutubeWV(youtubeVM: YoutubeVM = viewModel()) {
@@ -44,9 +44,12 @@ fun YoutubeWV(youtubeVM: YoutubeVM = viewModel()) {
 
     // Translate native back-presses to 'escape' button press
     BackHandler {
-        if (state.loadingState is LoadingState.Finished)
-            navigator.evaluateJavaScript(readRaw(context, R.raw.back_bridge))
-        else exitTrigger.value = true
+        if (state.loadingState is LoadingState.Finished) {
+            // Mapeia o botão voltar para uma ação de 'voltar' no player do YouTube
+            navigator.evaluateJavaScript("window.history.back();")
+        } else {
+            exitTrigger.value = true
+        }
     }
 
     // Fetch scripts and updates at launch
@@ -61,6 +64,15 @@ fun YoutubeWV(youtubeVM: YoutubeVM = viewModel()) {
         navigator.evaluateJavaScript(jsScript)
     // If any update found, show the dialog.
     if (updateData != null) UpdateDialog(updateData, navigator)
+    
+    // CSS extra para limpeza de interface
+    LaunchedEffect(loadingState) {
+        if (loadingState is LoadingState.Finished) {
+            val hideUI = "document.head.appendChild(document.createElement('style')).innerHTML = '.promoted-sparkles-text-search-item, .ytd-masthead, .ytd-guide-renderer { display: none !important; }';"
+            navigator.evaluateJavaScript(hideUI)
+        }
+    }
+
     // If exit button is pressed, 'finish the activity' aka 'exit the app'.
     if (exitTrigger.value) activity.finish()
 

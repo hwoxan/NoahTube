@@ -1,4 +1,4 @@
-package com.ycngmn.notubetv.utils
+package com.hwoxan.noahtube.utils
 
 import android.content.Context
 import com.multiplatform.webview.web.WebViewNavigator
@@ -15,7 +15,7 @@ data class ReleaseData (
 )
 
 suspend fun fetchUpdate() : ReleaseData {
-    val fetchUrl = "https://api.github.com/repos/ycngmn/notubetv/releases/latest"
+    val fetchUrl = "https://api.github.com/repos/ycngmn/noahtube/releases/latest"
     val client = HttpClient(OkHttp)
     val req = client.get(fetchUrl)
     val res = JSONObject(req.body() as String)

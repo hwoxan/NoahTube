@@ -1,8 +1,8 @@
-package com.ycngmn.notubetv.ui
+package com.hwoxan.noahtube.ui
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.ycngmn.notubetv.utils.ReleaseData
+import com.hwoxan.noahtube.utils.ReleaseData
 
 class YoutubeVM : ViewModel() {
     private val _scriptData = mutableStateOf<String?>(null)

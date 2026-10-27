@@ -1,4 +1,4 @@
-package com.ycngmn.notubetv.ui.components
+package com.hwoxan.noahtube.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -21,7 +21,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.tv.material3.Surface
 import androidx.tv.material3.Text
-import com.ycngmn.notubetv.ui.UpdateViewModel
+import com.hwoxan.noahtube.ui.UpdateViewModel
 
 
 @Composable

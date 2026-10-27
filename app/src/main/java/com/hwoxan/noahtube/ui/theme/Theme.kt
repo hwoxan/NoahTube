@@ -1,4 +1,4 @@
-package com.ycngmn.notubetv.ui.theme
+package com.hwoxan.noahtube.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
@@ -9,7 +9,7 @@ import androidx.tv.material3.lightColorScheme
 
 @OptIn(ExperimentalTvMaterial3Api::class)
 @Composable
-fun NoTubeTVTheme(
+fun NoahTubeTheme(
     isInDarkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
 ) {

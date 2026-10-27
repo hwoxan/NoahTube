@@ -1,8 +1,9 @@
-package com.ycngmn.notubetv.utils
+package com.hwoxan.noahtube.utils
 
 import android.content.Context
 import android.content.pm.PackageManager
 import android.webkit.PermissionRequest
+import android.webkit.WebSettings
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
@@ -27,6 +28,7 @@ fun permHandler(context: Context): PlatformWebViewParams {
             }
         }
     }
+    
     return PlatformWebViewParams(chromeClient = chrome)
 }
 

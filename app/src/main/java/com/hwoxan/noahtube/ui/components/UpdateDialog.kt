@@ -1,4 +1,4 @@
-package com.ycngmn.notubetv.ui.components
+package com.hwoxan.noahtube.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -30,7 +30,7 @@ import androidx.tv.material3.ButtonDefaults
 import androidx.tv.material3.Surface
 import androidx.tv.material3.Text
 import com.multiplatform.webview.web.WebViewNavigator
-import com.ycngmn.notubetv.utils.ReleaseData
+import com.hwoxan.noahtube.utils.ReleaseData
 import kotlinx.coroutines.launch
 
 @Composable
@@ -57,7 +57,7 @@ fun UpdateDialog(releaseData: ReleaseData, navigator: WebViewNavigator) {
                         .padding(20.dp)
                 ) {
                     Text(
-                        text = "NoTubeTV - ${releaseData.tagName} available!",
+                        text = "NoahTube - ${releaseData.tagName} available!",
                         modifier = Modifier.padding(bottom = 20.dp),
                         color = Color.White,
                         fontWeight = FontWeight.Bold,

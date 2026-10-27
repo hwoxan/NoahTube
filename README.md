@@ -1,9 +1,9 @@
 > [!IMPORTANT]
 ><p> Looks like this project motivated <i> reisXd</i> to make their work public <a href="https://github.com/reisxd/TizenTubeCobalt">@reisxd/TizenTubeCobalt</a>. Please use <b>TizenTube-Cobalt</b> from the url above which supports everything  including voice search and fixes a lot of our curent issues. And don't forget to show them your love. ❤️ </p>
 
-# NoTubeTV
+# NoahTube
 <p align="center">
-  <img src='assets/NoTubeTV_banner.png' alt="NoTubeTV_banner_image">
+  <img src='assets/NoahTube_banner.png' alt="NoahTube_banner_image">
 </p>
 
 <div align="center">This project owes it's existence to <a href="https://github.com/reisxd/TizenTube">@reisxd/TizenTube</a>. </div>
@@ -11,7 +11,7 @@
 
 ## • Installation
 
-[<img src='assets/get-it-on-github.png' alt='Get it on GitHub' height = "90">](https://github.com/ycngmn/NoTubeTV/releases/latest)
+[<img src='assets/get-it-on-github.png' alt='Get it on GitHub' height = "90">](https://github.com/ycngmn/NoahTube/releases/latest)
 
 ## Features
 
